@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Viewer 3D</title>
+
+  <!-- Model Viewer (CDN) -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      font-family: Arial, sans-serif;
+    }
+
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+      background-color: #111;
+    }
+
+    .loading {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="loading">Carregando modelo...</div>
+
+<model-viewer 
+  src="modelo.glb"
+  alt="Modelo 3D"
+
+  camera-controls
+  auto-rotate
+  shadow-intensity="1"
+  exposure="1"
+
+  environment-image="neutral"
+  
+  interaction-prompt="auto"
+>
+
+</model-viewer>
+
+</body>
+</html>
